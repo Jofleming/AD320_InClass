@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Message Board</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="api-page.html">APIs & Validation</a></li>
+                <li><a href="message-board.html">Message Board</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login-section">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <button id="login-btn">Login</button>
+            <button id="logout-btn" style="display:none;">Logout</button>
+            <p id="login-status"></p>
+        </section>
+
+        <section id="message-board" style="display:none;">
+            <h2>Post a Message</h2>
+            <textarea id="message" placeholder="Type your message here..." required></textarea>
+            <button id="post-message-btn">Post Message</button>
+
+            <h3>Messages:</h3>
+            <div id="messages-container"></div>
+        </section>
+    </main>
+
+    <script src="js/message-board.js" defer></script>
+</body>
+</html>

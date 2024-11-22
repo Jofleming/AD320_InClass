@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333; /* Inherited by all text elements */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Styles Using ID and Class */
+#about {
+    display: flex;
+    align-items: center;
+}
+
+#about img {
+    border-radius: 50%;
+    margin-right: 20px;
+    max-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-details { /* Class for about section details */
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Descendant and Child Combinators */
+section > p { /* Targets only direct child paragraphs within sections */
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555; /* Overrides inherited color */
+}
+
+section ul li { /* Descendant selector */
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+/* General Sibling Combinator */
+section ~ section { /* Targets any section that is a sibling of another section */
+    margin-top: 20px;
+}
+
+/* Projects Page Styles */
+#projects div.project-item { /* Class selector within ID */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#projects div.project-item:hover {
+    background-color: #e9e9e9;
+    border-color: #ccc;
+}
+
+/* Contact Page Styles */
+#contact {
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#contact input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    width: 150px;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #555;
+}

@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  /* Header and Navigation */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header nav ul li {
+    margin: 0 10px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    background-color: #777;
+  }
+  
+  /* Content Layout */
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0; /* Remove any top and bottom margin */
+    padding: 10px 0; /* Add padding to control space around the h1 */
+    background-color: #eaeaea; /* Optional: add a background color to visually define space */
+  }
+  
+  h2, h3 {
+    margin-top: 10px;
+    margin-bottom: 10px; /* Reduced margin for h2 and h3 */
+  }
+  
+  #chat-box {
+    margin: 10px auto; /* Reduced margin */
+    padding: 10px;
+    border: 1px solid #ccc;
+    height: 300px;
+    width: 100%;
+    max-width: 500px;
+    overflow-y: scroll;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  #chat-form {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+  }
+  
+  #chat-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #chat-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #chat-form button:hover {
+    background-color: #555;
+  }
+  
+  ul#users-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px auto; /* Reduced margin */
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  ul#users-list li {
+    background-color: #ddd;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+  }
+  

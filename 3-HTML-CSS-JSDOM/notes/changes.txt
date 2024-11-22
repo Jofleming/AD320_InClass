@@ -1,0 +1,35 @@
+JavaScript Integration:
+Linking JavaScript Files:
+The script.js file is linked in index.html using the defer attribute to ensure it loads after the HTML content. Additionally, the contact.js file is linked at the bottom of contact.html to handle form validation and interactions.
+Event Listeners and Functionality:
+Index Page: The script handles the button click to reveal or hide additional text, dynamically updating the button text. It also changes the image on hover using mouseover and mouseout events.
+Contact Page: The contact.js script validates form inputs and displays a confirmation message if the form is submitted with valid data. Invalid fields are highlighted with a red border to indicate errors.
+DOM Manipulation:
+Accessing Elements:
+
+We use document.getElementById and document.querySelector to access elements and manipulate their properties or classes, ensuring dynamic content updates and interactions.
+Form Validation:
+
+Contact Page: The script validates form fields for the user's name, email, and message. If any field is invalid, the .error class is applied to highlight the issue, and the form submission is prevented.
+Event Handling:
+Toggle Visibility:
+
+The click event listener is added to the "Reveal More" button on the index page to toggle the visibility of extra content.
+Hover Interaction:
+
+The mouseover and mouseout events are used to change the image when hovering over it, providing a dynamic visual effect on the index page.
+Form Submission:
+
+Contact Page: The submit event listener is added to the contact form to intercept the form submission, validate the inputs, and either display a confirmation message or highlight invalid fields.
+CSS:
+Class Definitions:
+
+A .hidden class is added to hide elements by default, which is used to control the visibility of extra content and confirmation messages.
+A .error class is added to highlight invalid form fields with a red border. The !important declaration is used to ensure this styling is applied correctly.
+UI Enhancements:
+
+Button and text styles are included to enhance the user interface, making interactions clear and visually appealing.
+Specific styles are defined for form inputs and text areas to maintain a consistent and user-friendly layout.
+Specificity and Debugging:
+
+Adjustments were made to ensure that the .error class correctly overrides other styles, using !important to guarantee the error state is visible.

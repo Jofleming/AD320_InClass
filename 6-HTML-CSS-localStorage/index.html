@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="api-page.html">APIs</a></li> <!-- New link -->
+                <li><a href="message-board.html">Message Board</a></li> <!-- New link -->
+                <li><a href="https://www.example.com" target="_blank">External Link</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="intro-grid">
+            <div class="intro-image">
+                <img id="tech-image" src="images/tech.jpg" alt="Technology Image">
+            </div>
+            <div class="intro-text">
+                <p>I am passionate about developing web pages and dedicated to creating user-friendly and aesthetically pleasing designs. My work is a blend of creativity and technical expertise, which I love to showcase in every project I undertake.</p>
+                <button id="reveal-btn">Reveal More</button>
+                <p id="extra-text" class="hidden">I believe in continuous learning and improvement. Every project is an opportunity to innovate and deliver something exceptional.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- New Slideshow Section -->
+    <section id="slideshow">
+        <img id="slideshow-image" src="images/jasper1.jpg" alt="Slideshow Image">
+    </section>
+
+    <!-- Button to Show/Hide Slideshow -->
+    <button id="toggle-slideshow-btn">Hide Slideshow</button>
+
+    <!-- Fetch Data Section -->
+    <section id="fetch-data-section">
+        <h2>Fetch Data Example</h2>
+        <button id="fetch-data-btn">Fetch Data</button> <!-- Single button -->
+        <div id="data-container"></div>
+    </section>
+
+    <!-- Send Data Section -->
+    <section id="send-data-section">
+        <h2>Send Data Example</h2>
+        <button id="send-data-btn">Send Data</button>
+        <div id="send-data-response"></div>
+    </section>
+
+    <script src="js/script.js"></script> <!-- Adjust script placement here -->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Chat Application</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/chat">Chat</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/queries">Queries</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <h1>Welcome to the Chat Application</h1>
+  <h2>Users Online:</h2>
+  <ul id="users-list"></ul>
+
+  <script>
+        async function fetchUsers() {
+    try {
+        console.log('Fetching users...');
+        const response = await fetch('/get-users', { cache: 'no-store' });
+        console.log('Response:', response);
+
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+
+        const users = await response.json();
+        console.log('Users:', users);
+
+        const usersList = document.getElementById('users-list');
+        usersList.innerHTML = '';
+        users.forEach(user => {
+        const listItem = document.createElement('li');
+        listItem.textContent = user;
+        usersList.appendChild(listItem);
+        });
+    } catch (error) {
+        console.error('Failed to fetch users:', error);
+    }
+    }
+
+    fetchUsers();
+    setInterval(fetchUsers, 5000); // Update every 5 seconds
+
+  </script>
+</body>
+</html>

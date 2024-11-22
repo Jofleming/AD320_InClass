@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contact">
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <input type="email" id="email" name="email" placeholder="Your Email">
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send">
+        </form>
+        <p id="confirmation" class="hidden">Thank you for your message! We'll get back to you soon.</p>
+        <script src="js/contact.js"></script>
+    </main>
+</body>
+</html>
+

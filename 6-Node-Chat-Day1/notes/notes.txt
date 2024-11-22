@@ -1,0 +1,109 @@
+Project Structure
+Here's a simplified view of the project directory:
+
+need to install node, express, mocha, chai@4.3.4, supertest and nyc
+npm install -y
+npm install --save-dev mocha chai@4.3.4 supertest nyc
+
+java
+Copy code
+chat-application/
+│
+├── app.js
+├── package.json
+├── public/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── chat.js
+│   ├── index.html
+│   ├── chat.html
+│   └── about.html
+1. app.js
+Purpose:
+
+The main server-side file that sets up the Node.js/Express application.
+Handles routing, serves static files, and manages the back-end logic for user and message handling.
+Contents:
+
+Express Setup: Initializes an Express app, configures middleware, and serves static files from the public directory.
+User Management: Routes for managing the online users (/join and /get-users).
+Message Handling: Routes for sending and retrieving chat messages (/send-message and /get-messages).
+Server Initialization: The server listens on a specified port (3000) and logs a message when it starts.
+2. package.json
+Purpose:
+
+Defines the metadata and dependencies for the Node.js project.
+Contents:
+
+Scripts: Includes a start script to run the application using npm start.
+Dependencies: Specifies required dependencies, such as Express.
+Project Metadata: Includes the project name, version, and other metadata.
+3. public/ Directory
+Purpose:
+
+Contains all static files (HTML, CSS, JavaScript) that are served to the client.
+4. public/css/styles.css
+Purpose:
+
+Defines the styling for the web pages.
+Contents:
+
+General Styling: Styles for the body, headers, and other elements.
+Navigation Bar: Styling for the header navigation bar.
+Chat Interface: Styles for the chat box, form elements, and user list.
+5. public/js/chat.js
+Purpose:
+
+The client-side JavaScript file that handles interaction with the chat application.
+Contents:
+
+Cookie Management: Functions to set and get cookies, used for storing the username.
+User Registration: Sends the username to the server to register the user.
+Message Handling: Handles sending messages and dynamically updates the chat box with messages retrieved from the server.
+Periodic Updates: Periodically fetches messages and users to update the UI.
+6. public/index.html
+Purpose:
+
+The home page of the application, displaying the list of online users and navigation links.
+Contents:
+
+Navigation Bar: Links to the chat and about pages.
+User List: Displays the list of users currently online, which is dynamically updated via JavaScript.
+7. public/chat.html
+Purpose:
+
+The main chat interface where users can send and receive messages.
+Contents:
+
+Chat Form: A form for entering a username and message.
+Chat Box: Displays messages received from the server in real-time.
+JavaScript Integration: Includes the chat.js script to handle chat functionality.
+8. public/about.html
+Purpose:
+
+A simple about page describing the chat application.
+Contents:
+
+Description: Briefly explains the purpose and functionality of the application.
+Navigation Link: A link to return to the home page.
+Key Concepts and Flow:
+User Registration:
+
+Users are registered by submitting their username via the /join route before sending their first chat message.
+Cookie Management:
+
+The username is stored in a cookie to persist across sessions.
+Dynamic Content:
+
+The list of online users and chat messages are dynamically fetched from the server and displayed on the client side.
+Routing:
+
+The app.js file defines routes for handling different parts of the application, such as serving HTML files and managing user interactions.
+
+For testing:
+test folder with app.js.test with unit tests
+Update app.js for testing at bottom
+Update package.json
+
+testing

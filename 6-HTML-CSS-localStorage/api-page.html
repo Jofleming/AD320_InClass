@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs and Validation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>APIs and Validation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="api-page.html">APIs & Validation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="nasa-apod">
+            <h2>NASA Astronomy Picture of the Day</h2>
+            <button id="fetch-nasa-btn">Get NASA APOD</button>
+            <div id="nasa-result"></div>
+        </section>
+
+        <section id="datamuse">
+            <h2>Datamuse Word Suggestions</h2>
+            <input type="text" id="word-input" placeholder="Enter a word">
+            <button id="fetch-datamuse-btn">Get Word Suggestions</button>
+            <div id="datamuse-result"></div>
+        </section>
+        
+
+        <section id="form-validation">
+            <h2>Form Validation Example</h2>
+            <form id="example-form">
+                <label for="email">Email: </label>
+                <input type="email" id="email" required>
+                
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" pattern="^\d{10}$" placeholder="1234567890" required>
+
+                <label for="zip">ZIP Code: </label>
+                <input type="text" id="zip" pattern="^\d{5}$" maxlength="5" required>
+
+                <button type="submit" id="submit-form-btn">Submit</button>
+            </form>
+            <div id="form-result"></div>
+        </section>
+    </main>
+
+    <script src="js/api-script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+New Page: message-board.html
+
+Purpose: Created a new page for a message board that allows users to log in, post messages, and view messages.
+Content:
+Login Section: Includes an input field for the username and buttons for login and logout.
+Message Board: Contains a text area for users to type their messages and a section to display posted messages.
+JavaScript File: message-board.js
+
+Purpose: This script handles the login/logout functionality, manages session data using cookies, and stores messages in localStorage.
+Key Functionalities Implemented:
+
+Login and Logout:
+Login: When a user logs in by entering their username, a session cookie named sessionUser is created to store the username.
+Logout: The logout functionality clears the session cookie, hides the message board, and shows the login section again.
+Message Posting:
+Users can post messages to the message board. These messages are stored in localStorage so that they persist across sessions.
+Messages are displayed on the message board along with the username of the poster.
+Data Storage and Retrieval:
+Cookies: Used to store the logged-in user's username (sessionUser).
+localStorage: Used to store messages, ensuring they persist between browser sessions.
+sessionStorage: Not used in the current implementation, but it could be leveraged for storing session-specific data if needed.
+Functions:
+setCookie(name, value, hours): Sets a cookie with the specified name, value, and expiration time.
+getCookie(name): Retrieves the value of the specified cookie.
+deleteCookie(name): Deletes the specified cookie.
+getStoredMessages(): Retrieves messages from localStorage.
+displayMessages(messages): Renders messages on the message board.
+Navigation Update in index.html
+
+Purpose: Added a link to the new message-board.html page in the site's navigation menu.
+Navigation Item: A new item labeled "Message Board" was added to the navigation menu, allowing users to easily access the message board from the home page.
+Debugging and Fixes:
+
+Username Display Issue: Addressed an issue where messages were being posted with "null" as the username. Ensured that the sessionUser is correctly retrieved before posting a message, so that the correct username is displayed.
+Cookie Management: Implemented functions to correctly manage cookies, ensuring that the login status persists across page reloads and sessions.

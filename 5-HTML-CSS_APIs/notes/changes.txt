@@ -1,0 +1,32 @@
+New Page: api-page.html:
+
+Purpose: A new page was created to demonstrate API interactions and form validation.
+Content:
+Sections for interacting with NASA’s APOD API, Datamuse API, and a form validation example.
+Each section contains buttons and input fields for user interaction.
+JavaScript File: api-script.js:
+
+Purpose: A new JavaScript file was created to handle API calls and form validation.
+Functionality Added:
+NASA APOD API Integration:
+Fetches and displays the Astronomy Picture of the Day.
+Uses Promises (then/catch) to handle the API call and display the data (image, title, date, explanation).
+Datamuse API Integration:
+Fetches word suggestions based on user input.
+Utilizes async/await for the API call.
+Displays the suggestions in a list format on the page.
+Form Validation:
+Implemented a form with fields for email, phone number, and ZIP code.
+Applied HTML5 validation attributes (required, pattern, maxlength, etc.) to enforce proper input formatting.
+Used JavaScript to handle the form submission, prevent the default behavior, and display a success message when the form is correctly filled out.
+Program Structure:
+
+HTML Structure:
+api-page.html: Contains sections dedicated to API interactions and form validation.
+Navigation: Links were added to the navigation menu to access the new api-page.html from the home page.
+JavaScript:
+api-script.js: Includes all the logic for fetching data from the APIs and handling form validation. This script is linked to api-page.html.
+User Interface Enhancements:
+
+Dynamic Content: The API data is dynamically inserted into the HTML, providing an interactive experience for users.
+Validation Feedback: Real-time feedback is provided to users when interacting with the form, ensuring inputs are valid before submission.

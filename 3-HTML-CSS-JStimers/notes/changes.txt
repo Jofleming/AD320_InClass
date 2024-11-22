@@ -1,0 +1,12 @@
+HTML Structure:
+
+We added a new <section> with an <img> tag in index.html to display the slideshow images. The images are identified by the id "slideshow-image".
+CSS:
+
+The CSS ensures that the slideshow image is centered, has a border-radius, and includes a slight shadow for visual effect.
+JavaScript Logic:
+
+Array of Images: The slideshowImages array holds the paths to the images you want to display in the slideshow.
+Current Image Index: We track the current image being displayed using currentImageIndex.
+Change Image Function: The changeImage function updates the src attribute of the image element, cycling through the array of images.
+Timer: setInterval is used to call changeImage every 3 seconds (3000 milliseconds), automatically cycling through the images.

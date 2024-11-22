@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Chat</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/queries">Queries</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Query Page</h1>
+    <button id="admin-btn">Get List of Admins</button>
+    <button id="recent-users-btn">Get Last 3 Users Online</button>
+    <button id="recent-messages-btn">Get Last 5 Messages</button>
+
+    <div id="results"></div>
+
+    <script>
+        document.getElementById('admin-btn').addEventListener('click', async () => {
+            const response = await fetch('/query-admins');
+            const result = await response.json();
+            displayResult(result, 'Admins');
+        });
+
+        document.getElementById('recent-users-btn').addEventListener('click', async () => {
+            const response = await fetch('/query-recent-users');
+            const result = await response.json();
+            displayResult(result, 'Recent Users');
+        });
+
+        document.getElementById('recent-messages-btn').addEventListener('click', async () => {
+            const response = await fetch('/query-recent-messages');
+            const result = await response.json();
+            displayResult(result, 'Recent Messages');
+        });
+
+        function displayResult(result, title) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';  // Clear previous results
+
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = title;
+            resultsDiv.appendChild(titleElement);
+
+            if (Array.isArray(result) && result.length > 0) {
+                const table = document.createElement('table');
+                table.style.width = '100%';
+                table.setAttribute('border', '1');
+                const tbody = document.createElement('tbody');
+
+                // Create table headers based on keys in the first object
+                const headers = Object.keys(result[0]);
+                const headerRow = document.createElement('tr');
+                headers.forEach(header => {
+                    const th = document.createElement('th');
+                    th.textContent = header.replace('_', ' ').toUpperCase();
+                    headerRow.appendChild(th);
+                });
+                tbody.appendChild(headerRow);
+
+                // Populate table rows with data
+                result.forEach(item => {
+                    const row = document.createElement('tr');
+                    headers.forEach(header => {
+                        const td = document.createElement('td');
+                        td.textContent = item[header];
+                        row.appendChild(td);
+                    });
+                    tbody.appendChild(row);
+                });
+
+                table.appendChild(tbody);
+                resultsDiv.appendChild(table);
+            } else {
+                resultsDiv.textContent = 'No results found.';
+            }
+        }
+    </script>
+</body>
+</html>
